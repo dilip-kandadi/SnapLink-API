@@ -1,0 +1,63 @@
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 40px;
+}
+
+#url{
+    width: 400px;
+    padding: 15px;
+    border-radius: 5px;
+    background: transparent;
+    border-color: white;
+    border-width: .5px;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#short{
+   width: 90px;
+   padding: 12px;
+   font-size: 20px; 
+   font-family: Arial, Helvetica, sans-serif; 
+   border-radius: 5px;
+}
+#result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    
+}
+#shortcode{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .8;
+    border-color: black;
+}
+#statsBtn{
+    width: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    border-width: .5px;
+    border-color: white;
+}
+#statsResult{
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 100px;
+    align-items: center;
+
+}
+body{
+    background-color: black;
+}

@@ -26,7 +26,7 @@ public class UrlShortenerLogic {
         long result = 0;
         for(int i=length-1;i>=0;i--){
             int val = ALLOWED_CHARACTERS.indexOf(chars[i]);
-            result += val * (long) (result + Math.pow(base,length-i-1));
+            result += val * (long) (Math.pow(base,length-i-1));
         }
         return result;
     }

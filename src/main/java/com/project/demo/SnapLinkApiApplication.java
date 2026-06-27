@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SnapLinkApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SnapLinkApiApplication.class, args);
+
+        SpringApplication.run(SnapLinkApiApplication.class, args);
 	}
 
 }

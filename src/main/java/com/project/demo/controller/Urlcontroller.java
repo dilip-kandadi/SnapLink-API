@@ -10,6 +10,7 @@ import java.util.Map;
 
 
 @RestController
+@CrossOrigin(origins = "*")
 public class Urlcontroller {
 
     @Autowired
