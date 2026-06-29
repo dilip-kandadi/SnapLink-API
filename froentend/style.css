@@ -58,6 +58,43 @@
     align-items: center;
 
 }
+.bucket{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#urlstats{
+    list-style-type: none;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.url-card{
+   background-color: white;
+   color: black;
+   padding: 13px 15px;
+   display: flex;
+   justify-content: space-between; 
+   border-radius: 8px;
+   font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.link-text {
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    max-width: 75%; 
+}
+.click-badge {
+    background-color: black; /* Inverts the colors for a cool badge effect */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 12px;
+}
 body{
     background-color: black;
 }

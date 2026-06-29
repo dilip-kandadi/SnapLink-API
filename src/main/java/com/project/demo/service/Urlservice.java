@@ -1,5 +1,6 @@
 package com.project.demo.service;
 
+import com.project.demo.URLSummary;
 import com.project.demo.model.Url;
 import com.project.demo.repository.UrlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -50,5 +52,9 @@ public class Urlservice {
         long id = logic.decode(shorturl);
         Url url = repo.findById(id).get();
         return url.getClickCount();
+    }
+
+    public List<URLSummary> getAllUrls() {
+        return repo.findAllBy();
     }
 }

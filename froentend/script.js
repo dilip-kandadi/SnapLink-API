@@ -4,6 +4,7 @@ const resultDisplay = document.getElementById('result');
 const codeInput = document.getElementById('shortcode');
 const statsBtn = document.getElementById('statsBtn');
 const statsResult = document.getElementById('statsResult');
+const urlstats = document.getElementById('urlstats');
 
 statsBtn.addEventListener('click',async function(){
     const shorturl = codeInput.value;
@@ -63,3 +64,29 @@ shortBtn.addEventListener('click',async function(){
         resultDisplay.innerText = "Cannot connect to the server. Is it running?";
     }
 });
+
+async function stats(){
+    urlstats.innerHTML='';
+    try{
+         const response = await fetch('http://localhost:8080/allStats');
+        if(response.ok){
+            const statsarr = await response.json();
+            statsarr.forEach(function(stat){
+                const li = document.createElement('li');
+                li.classList.add('url-card');
+                li.innerHTML=`
+                <span class="link-text">${stat.longUrl}</span>
+                <span class="click-badge">${stat.clickCount} Clicks</span>
+                `;
+                urlstats.appendChild(li);
+            });
+        }else{
+            urlstats.innerText="Something error happend";
+        }
+    }catch(error){
+        console.log(error);
+    }
+       
+}
+
+stats();

@@ -1,11 +1,13 @@
 package com.project.demo.controller;
 
+import com.project.demo.URLSummary;
 import com.project.demo.service.Urlservice;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 
@@ -35,4 +37,8 @@ public class Urlcontroller {
         return service.getClickCount(shorturl);
     }
 
+    @GetMapping("/allStats")
+    public List<URLSummary> getAllUrls(){
+        return service.getAllUrls();
+    }
 }
